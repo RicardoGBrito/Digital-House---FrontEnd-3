@@ -1,0 +1,28 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    font-family: 'Poppins';
+    
+}
+body{
+    width: 1728px;
+    height: 4307px;
+    background-color: #101010;
+
+}
+.title_section {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 54px;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 84px 1122px 18px 291px;
+}
+
+.grid_list{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px 292px 0px 292px;
+    width: 1146px;
+    gap: 24px;
+}

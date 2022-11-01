@@ -1,3 +1,4 @@
+import { ProjetoComponente } from '../../components/ProjetoComponente';
 import './style.scss';
 
 export function Projeto(){
@@ -7,6 +8,8 @@ export function Projeto(){
         {titulo:'Todas as Flores - Trechos gratuitos'},
         {titulo:'Novidades'},
 ] */
+
+    /*OBS: Ainda vou ajeitar as fotos */
 
     const conteudo = [
         {titulo:'Assista ao vivo', imagem:'https://globoplay.globo.com/tv-globo/ao-vivo/6120663/', tituloCard:'Card Canal', descricao1:'Hora Card', descricao2:'Conteúdo Card'},
@@ -29,9 +32,15 @@ export function Projeto(){
                     <h2>Carrossel de Divulgação</h2>
                 </li>
                 {
-                    conteudo.map((objLista) => (
+                    conteudo.map(
+                        objLista => (
 
-                        <li>
+
+                        <ProjetoComponente
+                            item={objLista}
+                        />
+
+                        /* <li>
                             <h2>{objLista.titulo}</h2>
                             <li>
                                 <img src={objLista.imagem}/>
@@ -41,7 +50,7 @@ export function Projeto(){
 
                             </li>
 
-                        </li>
+                        </li> */
 
 
                     ))

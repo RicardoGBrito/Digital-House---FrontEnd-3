@@ -1,0 +1,79 @@
+.card_quadrado {
+    display: flex;
+    flex-direction: column;
+    width: 560px;
+    height: 420px;
+    font-family: 'Poppins';
+    border-radius: 12px;
+    background-color: #151515;
+
+    .card_imagem {
+        width: 561px;
+        height: 300px;
+        border-radius: 12px 12px 0px 0px;
+        margin-bottom: 12px;
+    }
+
+    .card_name {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 560px;
+        height: 60px;
+
+        :nth-child(1){
+            color: #ffffff;
+            font-size: 24px;
+            line-height: 36px;
+            font-weight: 700;
+            margin: 12px 0px 6px 24px;
+        }
+        
+        :nth-child(2){
+            color: rgba(255, 255, 255, 0.2);
+            font-size: 16px;
+            line-height: 24px;
+            font-weight: 400;
+            text-decoration: line-through;
+            margin: 12px 24px 0px 0px;
+            width: 53px;
+            height: 24px;
+            
+        }
+    }
+    .card_categories {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+        width: 560px;
+        height: 60px;
+        
+        p:first-child{
+            color:rgba(255,255,255,0.2);
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            margin: 6px 0px 24px 24px;
+        }
+        
+        :nth-child(2){
+            color: rgba(255, 122, 0, 0.8);
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 48px;
+            margin: 1px 24px 16px 0px;
+            width: 69px;
+            height: 48px;
+            position: relative;
+            bottom: 12px;
+        }
+
+    }
+
+    small{
+        font-size: 24px;
+        line-height: 36px;
+    }
+}
