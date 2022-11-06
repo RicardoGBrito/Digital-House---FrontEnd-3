@@ -1,16 +1,147 @@
 *{
+    
+    
     box-sizing: border-box;
     margin:0;
     padding:0;
     font-family: 'Poppins';
     
 }
+
 body{
     width: 1728px;
     height: 4307px;
     background-color: #101010;
 
 }
+
+.header{
+
+    display: flex;
+    flex-direction: column;
+    width: 1728px;
+    height: 930px;
+    position: relative;
+    
+    .header_nav{
+        display: flex;
+        flex-direction: row;
+        background-color: #202020;
+        height: 120px;
+        
+    }
+    
+    a:hover{
+        color: #ffffff;
+
+    }
+    
+    .header_nav_store:hover{
+        color: #99510d;
+    }
+    .header_nav_logo{
+        margin: 36px 272px 36px 291px;
+        font-size: 32px;
+        line-height: 48px;
+        font-weight: 700;
+        color: #ffffff;
+    }
+
+    a{
+        height: 30px;
+        margin: 45px 12px 45px 12px;
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 20px;
+        line-height: 30px;
+        font-weight: 400;
+
+    }
+    
+    .header_nav_store{
+
+        color: #FF7A00;
+
+    }
+
+    .header_fundo{
+        width: 1728px;
+        height: 803px;
+    }
+
+    .header_propaganda{
+        position: absolute;
+        width: 602px;
+        height:505px;
+        top: 210px;
+        left: 563px;
+        background: rgba(12, 12, 12, 0.6);
+        backdrop-filter: blur(6px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        
+        h3{
+            font-size: 20px;
+            line-height: 30px;
+            font-weight: 700;
+            width:230px;
+            height:30px;
+            color: #ffffff;
+            text-align: center;
+            margin: 82px 186px 24px 186px;
+            
+            
+        }
+        :nth-child(2){
+            
+            font-style: normal;
+            font-weight: 900;
+            font-size:80px;
+            width: 492px;
+            height: 75px;
+            color: #ffffff;
+        }
+        :nth-child(3){
+            
+            font-style: normal;
+            font-weight: 900;
+            font-size:46px;
+            width: 442px;
+            height: 36px;
+            color: #ff7a00;
+            margin: 12px 80px 32px 80px;
+        }
+        :nth-child(4){
+            
+            font-style: normal;
+            font-weight: 500;
+            font-size:22px;
+            width: 492px;
+            height: 36px;
+            color: rgba(255, 255, 255, 0.8);
+            margin: 32px 55px 6px 55px;
+            text-align: center;
+        }
+        :nth-child(5){
+            
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            width: 492px;
+            height: 36px;
+            color: rgba(255, 255, 255, 0.8);
+            margin: 6px 55px 108px 55px;
+            text-align: center;
+        }
+
+    }
+
+
+
+}
+
 .title_section {
     font-weight: 700;
     font-size: 36px;

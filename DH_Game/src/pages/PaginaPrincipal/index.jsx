@@ -1,4 +1,7 @@
 import './style.scss'
+import abobora from './../../assets/image/abobora.png'
+import morcego from './../../assets/image/morcego.png'
+import fundo from './../../assets/image/Sem título.png'
 
 import { ComponenteCardQuadrado } from "../../components/ComponenteCardQuadrado"
 import { ComponenteCardRetangular } from "../../components/ComponenteCardRetangular"
@@ -118,6 +121,32 @@ export function PaginaPrincipal(){
 
     return(
         <main>
+            
+            <section className="header">
+                <nav className="header_nav">
+                    
+                    <h1 className="header_nav_logo">[ NOME OU LOGO AQUI ]</h1>
+                    <a className="header_nav_store">STORE</a>
+                    <a>LIBRARY</a>
+                    <a>COMMUNITY</a>
+                    <a>ABOUT</a>
+                    <a>PROFILE</a>
+                    
+                </nav>
+                <div>
+                    <img className="header_fundo" src={fundo}/>
+                    {/* <img className="header_abobora" src={abobora}/>
+                    <img className="header_morcego" src={morcego}/> */}
+                    <div className="header_propaganda">
+                        <h3>[ LOGO AQUI ]</h3>
+                        <h1>PROMOS OU</h1>
+                        <h1>DESCONTOZURAS?</h1>
+                        <p>O trocadilho é ruim mas as promoções não!</p>
+                        <p>Aproveite as assombrosas ofertas de Halloween.</p>
+                    </div>
+
+                </div>
+            </section>
 
             <section>
                 <h1 className="title_section">New Games</h1>
