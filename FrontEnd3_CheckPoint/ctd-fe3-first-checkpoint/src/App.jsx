@@ -1,7 +1,7 @@
 
 // Aqui você irá escrever as suas funções de Validação, para verificar se o Formulário foi preenchido corretamente
 
-/* import '' */
+
 import { Card } from "./Card"
 import {useState} from "react"
 
@@ -14,38 +14,25 @@ function App() {
   const [contador, setContador] = useState(1)
   const [verificar, setVerificar] = useState(false)
 
-  /* const toggleVerificar = (verificar) =>{
-    setVerificar(verificar => !verificar)
-  } */
 
-  console.log(verificar)
   function adicionarCard(event){
     event.preventDefault()
-    console.log(verificar)
+    
+    const result = verificarRegras()
 
-    /* (verificar)? setVerificar(!verificar) : verificarRegras() */
-    if(verificar===true)
-      /* setVerificar(verificar => !verificar) */
-      /* toggleVerificar(verificar) */
+    if(result===false){
       setVerificar(false)
-    else
-      verificarRegras()
-
-    console.log(verificar)
-
-    if(verificar===false){
-
       setContador(contador+1)
       console.log(contador)
-  
+      
       const newCardCor = {
         
         id: contador,
         nome: nome,
         cor: cor
-  
+        
       }
-  
+      
       console.log(cardCor.nome, cardCor.cor)
       
       setCardCor([...cardCor, newCardCor])
@@ -54,6 +41,11 @@ function App() {
       setCor('')
       
       console.log(cardCor.nome, cardCor.cor)
+    }else{
+      setVerificar(true)
+      setNome('')
+      setCor('')
+      
     }
   }
 
@@ -61,36 +53,37 @@ function App() {
 
 
     if(nome.length<3){
-      /* setVerificar(verificar => !verificar) */
-      setVerificar(true)
-      console.log(4)
-      console.log(verificar)
+      return true
+      
     } 
-    else
-      console.log(cor.length)
+    else{
       if(cor.length<6){
-        setVerificar(true)
-        console.log(5)
+        return true
       }
       else{
-        let count = 0;
+        let count = 0
+        let verificarHexa = 0
         cor.split("").forEach(caractere => {
           if(isNaN(caractere)){
             count++
-            console.log(count)
-          }})
-          console.log(count)
-          console.log(cor.length)
-          if(count === cor.length)
-            setVerificar(true)
-            /* toggleVerificar(verificar) */
-            console.log(18)
-          
-        
-            
+
+            if(caractere === '#'){
+              verificarHexa++
+            }
+          }
+        })
+        if(verificarHexa !== 1){
+          return true
+        }
+        else if (count === cor.length){
+          return true
+        }
+        else{
+          return false
+        }
       }
     }
-
+  }
 
   return (
     <main>
@@ -103,43 +96,13 @@ function App() {
 
             <div className="label-input">
               <label htmlFor="nome">Nome</label>
-              <input className={`${verificar? 'background-red': ''}`} type="text" value={nome} id="nome" onChange={event => 
-                {
-                  setNome(event.target.value.trim())
-                  /* let nome = event.target.value.trim()
-                  if(nome.length<3)
-                    verificarRegras()
-                  else
-                    setNome(event.target.value) */
-                }
-              }/>
+              <input className={`${verificar? 'background-red': ''}`} type="text" value={nome} id="nome" onChange={event => {setNome(event.target.value.trim())}}/>
 
             </div>
             <div className="label-input">
 
               <label htmlFor="cor">Cor</label>
-              <input className={`${verificar? 'background-red': ''}`} type="text" value={cor} id="cor" placeholder="Insira sua cor no formato Hexadecimal" onChange={event => 
-                {
-                  setCor(event.target.value.trim())
-                  /* let cor = event.target.value.trim()
-                  if(cor.length()<6){
-                    verificarRegras()
-                  }
-                  else{
-                    cor.split("").forEach(caractere => {
-                      let count = 0;
-                      if(isNaN(caractere)){
-                        count++
-                      }
-                      if(count === cor.length())
-                        verificarRegras()
-                      else
-                        setCor(event.target.value)
-                    })
-                        
-                  } */
-                }
-              }/>
+              <input className={`${verificar? 'background-red': ''}`} type="text" value={cor} id="cor" placeholder="Insira sua cor no formato Hexadecimal" onChange={event => {setCor(event.target.value.trim())} }/>
             </div>
           </div>
           
