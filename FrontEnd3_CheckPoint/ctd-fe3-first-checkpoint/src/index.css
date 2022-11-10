@@ -1,0 +1,163 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  monospace;
+}
+
+main{
+  width:1200px;
+  margin:84px auto 42px auto;
+
+}
+body{
+  background-color: #1e1e1e;
+  
+
+}
+
+.background-red{
+  background-color: rgba(34,21,21,0.6) !important;
+  border: 1px solid #ff7070;
+  
+}
+
+span{
+  color: red;
+  font-size: 16px;
+  position: relative;
+  top:12px;
+  height: 24px;
+  width: 419px;
+  
+}
+
+.display{
+  display: none;
+}
+
+.App{
+  background-color: #151515;
+  height:309px;
+  /* padding:32px; */
+  border-radius: 12px;
+
+}
+
+input{
+  width:562px;
+  height: 48px;
+  border-radius:12px;
+  background-color:#353535;
+  border:0px;
+  font-size:18px;
+  color: rgba(255, 255, 255, 0.6);
+  text-indent: 12px;
+}
+
+h1{
+  font-size:40px;
+  color:#ffffff;
+  font-weight:900;
+  
+}
+.titulo_principal{
+  position:relative;
+  top: 32px;
+  margin:32px;
+}
+
+.titulo_secundario{
+  
+  margin: 42px 821px 32px 0px;
+}
+
+form{
+  display:flex;
+  flex-wrap: wrap;
+  margin: 32px;
+  position:relative;
+  top:32px;
+
+  
+}
+
+.labels-inputs{
+  display:flex;
+  gap:16px;
+  
+}
+
+.label-input{
+  display:flex;
+  flex-direction: column;
+  
+}
+
+label{
+  font-size:16px;
+  font-weight:500;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+button{
+  width:231px;
+  height: 57px;
+  border-radius: 12px;
+  background-color:#36ce7c;
+  color: #ffffff;
+  font-size:16px;
+  border:0px;
+  position:relative;
+  top:24px;
+  left:915px;
+  
+}
+
+section{
+  display: flex;
+  flex-wrap: wrap;
+  gap:20px;
+
+}
+
+.card{
+  width:590px;
+  height: 258px;
+  border-radius: 12px;
+  /* display:flex;
+  flex-direction:column;
+  justify-content: flex-end;
+  align-items: flex-start; */
+}
+
+.card-nome{
+  width:123.64px;
+  height: 24px;
+  font-size:16px;
+  font-weight:500;
+  color:#ffffff;
+  position:relative;
+  top: 160px;
+  left:34.71px;
+  filter: invert(100%);
+}
+
+.card-cor{
+  width: 165.94px;
+  height:48px;
+  font-size:32px;
+  font-weight: 900;
+  color:#ffffff;
+  position:relative;
+  top: 120px;
+  left: 34.71px;
+  -webkit-filter: invert(100%);
+}
