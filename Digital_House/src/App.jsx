@@ -7,6 +7,7 @@ import { QuintaAula } from './classes/QuintaAula'
 import {AtividadePokemon} from './classes/AtividadePokemon'
 import { DecimaTerceiraAula } from './classes/DecimaTerceiraAula'
 import { MesaTreze } from './classes/DecimaTerceiraAula/MesaTreze'
+import { DecimaQuintaAula } from './classes/DecimaQuintaAula'
 
 //No import as palavras estão entre chaves pq não tem default na exportação
 
@@ -22,7 +23,8 @@ function App() {
       {/* <QuintaAula/> */}
       {/* <AtividadePokemon/> */}
       {/* <DecimaTerceiraAula/> */}
-      <MesaTreze/>
+      {/* <MesaTreze/> */}
+      <DecimaQuintaAula/>
     
     </>
   )
