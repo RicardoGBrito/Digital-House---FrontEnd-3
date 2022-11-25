@@ -33,7 +33,7 @@ export function DecimaQuintaAula() {
         fetch(`https://viacep.com.br/ws/${cep}/json/`)
         .then(response =>{return response.json()})
         .then(dados => {
-            if(dados.error !== undefined){
+            if(dados.error !== ''){
                 alert('CEP inválido')
             }else{
     
@@ -41,7 +41,7 @@ export function DecimaQuintaAula() {
             }
         })
     }
-    
+
 
     function deleteLocation(currentLocation){
         const newLocations = []
@@ -88,7 +88,7 @@ export function DecimaQuintaAula() {
                                 <DecimaQuintaAulaItem
                                     key={index}
                                     data={location}
-                                    onDeleteLocation={currentLocation => deleteLocation(currentLocation,) }
+                                    onDeleteLocation={currentLocation => deleteLocation(currentLocation) }
                                 />
                             )
                         }
