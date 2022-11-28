@@ -17,6 +17,7 @@ import { MesaTreze } from './classes/DecimaTerceiraAula/MesaTreze'
 import { DecimaQuintaAula } from './classes/DecimaQuintaAula'
 import { MainLayout } from "./components/MainLayout";
 import { SetimaAula } from "./classes/SetimaAula";
+import { AtividadePosts } from "./classes/AtividadePosts";
 
 
 
@@ -60,6 +61,10 @@ function App() {
         {
           path:"atv-pokemon",
           element: <AtividadePokemon/>
+        },
+        {
+          path:"atv-posts",
+          element: <AtividadePosts/>
         }
       ]
 

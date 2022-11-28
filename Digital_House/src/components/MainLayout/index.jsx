@@ -14,6 +14,7 @@ export function MainLayout() {
         {aula:'terceira-aula', nome:'Terceira Aula'},
         {aula:'segunda-aula', nome:'Segunda Aula'},
         {aula:'atv-pokemon', nome:'Atividade Pokemon'},
+        {aula:'atv-posts', nome:'Atividade Posts'},
   ]
 
     return (
