@@ -1,9 +1,12 @@
 import { Link, Outlet } from 'react-router-dom'
 import { SegundaAula } from '../../classes/SegundaAula'
+import { useTheme } from "../../hooks/useTheme"
 
 import './style.scss'
 
+
 export function MainLayout() {
+
 
     const dados = [
         {aula:'decima-quinta-aula', nome:'Décima Quinta Aula'},
@@ -15,44 +18,51 @@ export function MainLayout() {
         {aula:'segunda-aula', nome:'Segunda Aula'},
         {aula:'atv-pokemon', nome:'Atividade Pokemon'},
         {aula:'atv-posts', nome:'Atividade Posts'},
+        {aula:'configuracoes', nome:'Configurações'},
   ]
 
-    return (
-        <div className="main-layout-component">
+    const { theme, changeTheme} = useTheme() 
 
-            <header className='main-layout-component-header'>
+    return (
+        <div className={`main-layout ${theme}`}>
+
+            <div className={`main-layout-component`}>
 
                 <h1>Layout Principal</h1>
 
-                <ul>
+                <header className={`main-layout-component-header `}>
 
-                    {
-                        dados.map((items, index)=> (
-                            <li key={index}>
-                                <Link to={items.aula}>{items.nome}</Link>
 
-                            </li>
-                        ))
-                    }
+                    <ul>
 
-                   {/* <li>
+                        {
+                            dados.map((items, index)=> (
+                                <li key={index}>
+                                    <Link to={items.aula}>{items.nome}</Link>
 
-                        <Link to="decima-quarta-aula">Decima Quarta Aula</Link>
-                        <Link to="decima-quarta-aula">Decima Quarta Aula</Link>
- 
-                    </li>
+                                </li>
+                            ))
+                        }
 
-                    <li>
+                    {/* <li>
 
-                        <Link to="decima-quinta-aula">Decima Quinta Aula</Link>
+                            <Link to="decima-quarta-aula">Decima Quarta Aula</Link>
+                            <Link to="decima-quarta-aula">Decima Quarta Aula</Link>
+    
+                        </li>
 
-                    </li> */}
+                        <li>
 
-                </ul>
+                            <Link to="decima-quinta-aula">Decima Quinta Aula</Link>
 
-            </header>
+                        </li> */}
 
-            <main className='main-layout-component-main'>
+                    </ul>
+
+                </header>
+            </div>
+
+            <main className={`main-layout-component-main `}>
 
                 <p>O conteúdo será carregado aqui dentro:</p>
 

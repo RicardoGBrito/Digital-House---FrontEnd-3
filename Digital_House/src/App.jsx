@@ -18,6 +18,9 @@ import { DecimaQuintaAula } from './classes/DecimaQuintaAula'
 import { MainLayout } from "./components/MainLayout";
 import { SetimaAula } from "./classes/SetimaAula";
 import { AtividadePosts } from "./classes/AtividadePosts";
+import { Configurations } from "./pages/Configurations";
+import { ThemeProvider } from "./hooks/useTheme"
+import { LanguageProvider } from "./hooks/useLanguage"
 
 
 
@@ -65,6 +68,10 @@ function App() {
         {
           path:"atv-posts",
           element: <AtividadePosts/>
+        },
+        {
+          path:"configuracoes",
+          element: <Configurations/>
         }
       ]
 
@@ -88,7 +95,13 @@ function App() {
       {/* <AtividadePokemon/> */}
       {/* <DecimaTerceiraAula/> */}
       {/* <MesaTreze/> */}
-      <RouterProvider router={router} />
+
+
+      <ThemeProvider>
+        <LanguageProvider>
+          <RouterProvider router={router} />
+        </LanguageProvider>
+      </ThemeProvider>
 
     </>
   )
